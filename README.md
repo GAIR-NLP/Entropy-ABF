@@ -28,16 +28,16 @@ We replicate the paper summarization test proprosed in NTK-Aware scaling's [blog
 
 In short, to load LLaMA model with our method, you should first import required packages:
 
-```
+```python
 from transformers.models.llama.modeling_llama import LlamaForCausalLM
-import patch.EABF as EABF
+import patch.eabf as eabf
 ```
 
 Then, you can load the model by using the right `rope_scaling` argument and our monkey patching function:
 
-```
+```python
 model = LlamaForCausalLM.from_pretrained(MODEL_NAME_OR_PATH, ..., rope_scaling={"type": "eabf", "factor": 4})
-EABF.apply_eabf(model)
+eabf.apply_eabf(model)
 ```
 
 ### Replicate Observation of Attention Scores
