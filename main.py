@@ -1,7 +1,7 @@
 import torch
 from transformers import LlamaTokenizer
 from transformers.models.llama.modeling_llama import LlamaForCausalLM
-import patch.EABF as EABF
+import patch.eabf as eabf
 
 
 def load_eabf_model(model_path: str, use_flash_attention=True):
@@ -16,7 +16,7 @@ def load_eabf_model(model_path: str, use_flash_attention=True):
         torch_dtype=torch.bfloat16,
         rope_scaling={"type": "eabf", "factor": 4},
     ).to(device)
-    EABF.apply_eabf(model)
+    eabf.apply_eabf(model)
     return model, tokenizer
 
 
