@@ -4,7 +4,7 @@ This is the official repo for "Extending LLMs' Context Window with 100 Samples".
 
 ## Introduction
 
-We introduce 'Entropy-Aware ABF' that supports effcient context window extension of RoPE-based LLMs with only 100 samples. The repository contains code and data to replicate our result.
+We introduce 'Entropy-Aware ABF' that supports efficient context window extension of RoPE-based LLMs with only 100 samples. The repository contains code and data to replicate our results.
 
 ## Model and Data
 
@@ -12,9 +12,9 @@ We release long-context [Llama-2-7b-chat](https://huggingface.co/meta-llama/Llam
 
 | Data | Link |
 | ---: | :--- |
-| 0.1k | -    |
-|   1k | -    |
-| 3.5k | -    |
+| 0.1k | [🤗eabf-llama2-7b-chat-0.1k](https://huggingface.co/Arist12/eabf-llama2-7b-chat-0.1k)  |
+|   1k | [🤗eabf-llama2-7b-chat-1k](https://huggingface.co/Arist12/eabf-llama2-7b-chat-1k)    |
+| 3.5k | [🤗eabf-llama2-7b-chat-3.5k](https://huggingface.co/Arist12/eabf-llama2-7b-chat-3.5k)    |
 
 We also release our training data on 🤗[Hugging Face Datasets](https://huggingface.co/datasets/Arist12/EABF-ShareGPT-Long-3.5k).
 
@@ -24,9 +24,9 @@ We also release our training data on 🤗[Hugging Face Datasets](https://hugging
 
 To use our code, your [transformers](https://github.com/huggingface/transformers) library should be version 4.31 or higher.
 
-We replicate the paper summarization test proprosed in NTK-Aware scaling's [blog](https://www.reddit.com/r/LocalLLaMA/comments/14lz7j5/ntkaware_scaled_rope_allows_llama_models_to_have/) to serve as a sanity check.
+We replicate the paper summarization test proposed in NTK-Aware scaling's [blog](https://www.reddit.com/r/LocalLLaMA/comments/14lz7j5/ntkaware_scaled_rope_allows_llama_models_to_have/) to serve as a sanity check.
 
-In short, to load LLaMA model with our method, you should first import required packages:
+In short, to load the LLaMA model with our method, you should first import the required packages:
 
 ```python
 from transformers.models.llama.modeling_llama import LlamaForCausalLM
