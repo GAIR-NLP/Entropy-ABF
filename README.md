@@ -1,6 +1,6 @@
 # Extending LLMs' Context Window with 100 Samples
 
-This is the official repo for "Extending LLMs' Context Window with 100 Samples".
+This is the official repo for "Extending LLMs' Context Window with 100 Samples". [Preprint](http://arxiv.org/abs/2401.07004)
 
 ## Introduction
 
