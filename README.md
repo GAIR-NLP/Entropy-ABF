@@ -4,7 +4,7 @@ This is the official repo for "Extending LLMs' Context Window with 100 Samples".
 
 ## Introduction
 
-We introduce 'Entropy-Aware ABF' that supports efficient context window extension of RoPE-based LLMs with only 100 samples. The repository contains code and data to replicate our results.
+We introduce 'Entropy-Aware ABF' that supports efficient context window extension of RoPE-based LLMs with only 100 samples. The repository contains code and data to reproduce our model.
 
 ## Model and Data
 
@@ -24,7 +24,7 @@ We also release our training data on 🤗[Hugging Face Datasets](https://hugging
 
 To use our code, your [transformers](https://github.com/huggingface/transformers) library should be version 4.31 or higher.
 
-We replicate the paper summarization test proposed in NTK-Aware scaling's [blog](https://www.reddit.com/r/LocalLLaMA/comments/14lz7j5/ntkaware_scaled_rope_allows_llama_models_to_have/) to serve as a sanity check.
+We adopt the paper summarization test proposed in NTK-Aware scaling's [blog](https://www.reddit.com/r/LocalLLaMA/comments/14lz7j5/ntkaware_scaled_rope_allows_llama_models_to_have/) to serve as a sanity check.
 
 In short, to load the LLaMA model with our method, you should first import the required packages:
 
@@ -40,6 +40,6 @@ model = LlamaForCausalLM.from_pretrained(MODEL_NAME_OR_PATH, ..., rope_scaling={
 eabf.apply_eabf(model)
 ```
 
-### Replicate Observation of Attention Scores
+### Reproduce Observation of Attention Scores
 
 Other RoPE-based LLMs might or might not follow the same attention scores pattern as [Llama-2-7b-chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf), we release our code for retrieving attention scores and computing the 'attention entropy' so that users can apply our method tailored to their model.
